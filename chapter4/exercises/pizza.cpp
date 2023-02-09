@@ -12,6 +12,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
+#include <cassert> 
+#include <cstring>
+#include <vector>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+#include <algorithm>
+#include <ctime>
 
 #define M_PI 3.14159265358979323846
 
@@ -19,9 +27,32 @@ using namespace std;
 
 int main(int argc, char** argv); // function prototype
 void printPizzaInfo(int diameter, int slices, int cost);
-int calcCostPerSlice(int diameter, int slices, int cost);
-void giveResults(int& diameter, int& slices, int& cost); 
-double calculateArea(int& diameter);
+//void printPizzaInfo(int sides, int slices, int cost); // overloaded function
+int calcCostPerSlice(int diameter, int slices, int cost); // function prototype
+void giveResults(int& diameter, int& slices, int& cost); // function prototype
+double calculateArea(int& diameter); // function prototype
+double test_pizza_area_by_assertion(int& diameter, int& slices, int& cost); // function prototype
+
+/* void printPizzaInfo(int sides, int slices, int cost) {
+    cout << "Sides: " << sides << endl;
+    cout << "Slices: " << slices << endl;
+    cout << "Cost: $" << cost << endl;
+    cout << "Cost per slice: $" << calcCostPerSlice(sides, slices, cost) << endl;
+} */
+
+/**
+ * @brief Cannot be overloaded because the return type is the same as the round pizza scenario parameters
+ * 
+ * @param diameter 
+ * @param slices 
+ * @param cost 
+ */
+
+double test_pizza_area_by_assertion(int& diameter, int& slices, int& cost) {
+    double area = calculateArea(diameter);
+    assert(area == 78.53981633974483);
+    return area;
+}
 
 void printPizzaInfo(int diameter, int slices, int cost) {
     cout << "Diameter: " << diameter << " inches" << endl;
