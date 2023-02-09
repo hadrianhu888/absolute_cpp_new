@@ -31,6 +31,7 @@ void printPizzaInfo(int diameter, int slices, int cost);
 int calcCostPerSlice(int diameter, int slices, int cost); // function prototype
 void giveResults(int& diameter, int& slices, int& cost); // function prototype
 double calculateArea(int& diameter); // function prototype
+double test_pizza_cost_by_assertion(int& diameter, int& slices, int& cost); // function prototype
 double test_pizza_area_by_assertion(int& diameter, int& slices, int& cost); // function prototype
 
 /* void printPizzaInfo(int sides, int slices, int cost) {
@@ -47,6 +48,12 @@ double test_pizza_area_by_assertion(int& diameter, int& slices, int& cost); // f
  * @param slices 
  * @param cost 
  */
+
+double test_pizza_cost_by_assertion(int& diameter, int& slices, int& cost) {
+    double area = calculateArea(diameter);
+    assert(cost == 10);
+    return area;
+}
 
 double test_pizza_area_by_assertion(int& diameter, int& slices, int& cost) {
     double area = calculateArea(diameter);
