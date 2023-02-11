@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "f:/GitHubRepos/absolute_cpp/chapter4",
-      "program": "f:/GitHubRepos/absolute_cpp/chapter4/build/Debug/outDebug",
+      "cwd": "f:/GitHubRepos/absolute_cpp",
+      "program": "f:/GitHubRepos/absolute_cpp/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
       "setupCommands": [

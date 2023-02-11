@@ -28,6 +28,8 @@ int score(double points); // function prototype
 double theAnswer(double data1, double data2); // function prototype
 double theAnswer(double time, int count); // function prototype
 
+double rainProb(double temp, double humidity, double windSpeed); // function prototype
+
 double score(double time, double distances) {
     return time * distances;
 }
@@ -42,6 +44,14 @@ double theAnswer(double data1, double data2) {
 
 double theAnswer(double time, int count) {
     return time * count;
+}
+
+double rainProb(double temp, double humidity, double windSpeed) {
+    /**
+     * @brief The rain probability is calculated by multiplying the temperature, humidity, and wind speed
+     * 
+     */
+    return temp * humidity * windSpeed;
 }
 
 int main(int argc, char* argv[]) {
@@ -74,3 +84,10 @@ int main(int argc, char* argv[]) {
 }
 
 // Path: chapter4\exercises\self_tests.cpp
+
+/**
+ * @brief fundamental rule for testing functions is that the function must be tested with a variety of inputs
+    A driver program is a program that tests a function by calling it with a variety of inputs and then checking the output
+    A stub is a program that provides a function with a variety of inputs and then checks the output
+ * 
+ */
