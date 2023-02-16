@@ -13,6 +13,8 @@
 #define WEIGHT_LENGTH_HPP
 
 #ifdef __cplusplus
+#include "lb_oz_2_kg_gm.hpp"
+#include "metric_imperial.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
@@ -31,8 +33,10 @@
 using namespace std;
 #endif
 
-#include "lb_oz_2_kg_gm.hpp"
-#include "metric_imperial.hpp"
+const int WEIGHT = 1;   // weight conversion choice
+const int LENGTH = 2;   // length conversion choice
+const int METRIC = 1;   // metric units choice
+const int IMPERIAL = 2; // imperial units choice
 
 int choice;   // user choice between weight and length conversion
 char unit;    // user choice between metric and imperial units
