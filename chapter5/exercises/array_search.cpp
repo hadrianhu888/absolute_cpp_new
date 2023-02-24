@@ -29,8 +29,22 @@ const int DECLARED_SIZE = 5;
 
 void fillArray(int a[], int size);
 void showArray(int a[], int size);
+bool searchArray_alt(int a[], int size, int target);
 int searchArray(int a[], int size, int target);
 int main(int argc, char **argv); // main function prototype
+
+bool searchArray_alt(int a[], int size, int target)
+{
+    int i;
+    for (i = 0; i < size; i++)
+    {
+        if (a[i] == target)
+        {
+            return true;
+        }
+    }
+    return false;
+}
 
 int main(int argc, char **argv)
 {
@@ -43,6 +57,15 @@ int main(int argc, char **argv)
     cout << "Enter a number to search for: ";
     cin >> target;
     index = searchArray(scores, DECLARED_SIZE, target);
+    if (index == -1)
+    {
+        cout << "The number " << target << " was not found." << endl;
+    }
+    else
+    {
+        cout << "The number " << target << " was found at index " << index+1 << endl;
+    }
+    index = searchArray_alt(scores, DECLARED_SIZE, target);
     if (index == -1)
     {
         cout << "The number " << target << " was not found." << endl;
