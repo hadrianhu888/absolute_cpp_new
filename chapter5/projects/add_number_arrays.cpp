@@ -62,3 +62,4 @@ int main(int argc,char **argv) {
     printf("The sum of the two arrays is: %d",array3);
     return 0;
 }
+
