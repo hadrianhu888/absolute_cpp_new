@@ -28,6 +28,7 @@ using namespace std;
 
 int *array1;
 int *array2; 
+int *array3; 
 
 int main(int argc,char **argv); 
 int *add_two_arrays(int *array1,int *array2,int size);
