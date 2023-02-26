@@ -40,6 +40,8 @@ using namespace std::chrono;
 int board[ARRAY_SIZE][ARRAY_SIZE];
 int player1_wins = 0;
 int player2_wins = 0;
+char X ='X'; 
+char O ='O'; 
 float player1_win_percentage = 0.0;
 float player2_win_percentage = 0.0;
 float player1_lose_percentage = 0.0;
@@ -73,11 +75,11 @@ void display_board(int board[ARRAY_SIZE][ARRAY_SIZE]) {
 }
 
 void draw_X(int board[ARRAY_SIZE][ARRAY_SIZE],int row,int col) {
-    board[row][col] = 1;
+    board[row][col] = X;
 }
 
 void draw_O(int board[ARRAY_SIZE][ARRAY_SIZE],int row,int col) {
-    board[row][col] = 2;
+    board[row][col] = O; 
 }
 
 void check_for_winner(int board[ARRAY_SIZE][ARRAY_SIZE]) {
