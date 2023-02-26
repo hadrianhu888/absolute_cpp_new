@@ -205,5 +205,3 @@ int main(int argc,char **argv) {
     cout << "Player 2 wins: " << player2_wins << endl;
     return 0;
 }
-
-
