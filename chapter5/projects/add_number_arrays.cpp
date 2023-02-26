@@ -60,7 +60,7 @@ int main(int argc,char **argv) {
     for (int i = 0; i < size; i++) {
         cout << "The " << i + 1 << " element of the third array is: " << array3[i] << endl;
     }
-    printf("The sum of the two arrays is: %d",array3);
+    printf("The sum of the two arrays is: %d",*array3);
     return 0;
 }
 
