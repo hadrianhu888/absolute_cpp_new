@@ -144,3 +144,16 @@ int main(int argc, char* argv[])
     return 0;
 }
 
+/**
+ * @brief documentation
+ * 
+ */
+/*    
+This program simulates the Game of Life, a cellular automaton devised by John Conway. The program creates a 2D grid of cells with random initial states, then simulates the evolution of this grid over a certain number of generations. The rules for the simulation are as follows:
+
+A live cell with fewer than two live neighbors dies (underpopulation).
+A live cell with two or three live neighbors lives on to the next generation.
+A live cell with more than three live neighbors dies (overcrowding).
+A dead cell with exactly three live neighbors becomes a live cell (reproduction).
+The program uses several helper functions to initialize the board, print the board to the console, save the board data to a file, count the number of live neighbors for a given cell, and simulate one generation of the game. The main function sets the board size and number of generations to simulate, initializes the board, prints each generation to the console, saves each generation's board data to a file, and simulates each generation.
+*/ 
