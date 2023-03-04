@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\chapter3",
-    "\\chapter3\\projects"
+    "\\chapter3\\projects",
+    "\\chapter3\\projects\\prize_giveaway",
+    "\\chapter5",
+    "\\chapter5\\projects"
   ],
-  "SelectedNode": "\\chapter3\\projects\\p1.cpp",
+  "SelectedNode": "\\chapter5\\projects\\life.txt",
   "PreviewInSolutionExplorer": false
 }
