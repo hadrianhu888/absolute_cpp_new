@@ -170,8 +170,18 @@ int main(int argc, char* argv[])
         saveBoard(board, filename);
         simulateGeneration(board);
     }
-    //findStableBoard(board);
-    findStableBoard(board);
+    /**
+     * @brief replay the game of life and find stable board configurations 
+     * 
+     */
+    for (int i = 0; i < 100; i++)
+    {
+        printBoard(board);
+        string filename = "Life_Data_" + to_string(i) + ".dat";
+        saveBoard(board, filename);
+        simulateGeneration(board);
+        findStableBoard(board);
+    }
     return 0;
 }
 
