@@ -1,0 +1,14 @@
+#ignore output files from C++ and file outputs from Game of Life or other programs
+
+#ignore output files from C++
+
+*.o
+*.out
+*.exe
+
+#ignore file outputs from Game of Life or other programs
+
+*.dat
+*.txt
+*.csv 
+*.png
