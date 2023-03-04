@@ -33,5 +33,7 @@
     "**/.vscode/**"
   ],
   "C_Cpp_Runner.useMsvc": false,
-  "C_Cpp_Runner.useAddressSanitizer": false
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "chatgpt.apiKey": "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",
+  "chatgpt.timeoutLength": 30
 }
