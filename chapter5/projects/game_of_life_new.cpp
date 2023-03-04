@@ -27,6 +27,7 @@ void initBoard(vector<vector<int>>& board);
 void printBoard(const vector<vector<int>>& board);
 void saveBoard(const vector<vector<int>>& board, const string& filename);
 void updateBoard(vector<vector<int>>& board);
+void findStableBoard(vector<vector<int>>& board);
 
 //main function prototype
 int main(int argc, char* argv[]);
@@ -130,6 +131,34 @@ void simulateGeneration(vector<vector<int>>& board)
     board = newBoard;
 }
 
+// Helper function to find a stable board
+void findStableBoard(vector<vector<int>>& board)
+{
+    vector<vector<int>> newBoard = board;
+    for (int i = 0; i < ROWS; i++)
+    {
+        for (int j = 0; j < COLS; j++)
+        {
+            int liveNeighbors = countLiveNeighbors(board, i, j);
+            if (board[i][j] == 1)
+            {
+                if (liveNeighbors < 2 || liveNeighbors > 3)
+                {
+                    newBoard[i][j] = 0;
+                }
+            }
+            else
+            {
+                if (liveNeighbors == 3)
+                {
+                    newBoard[i][j] = 1;
+                }
+            }
+        }
+    }
+    board = newBoard;
+}
+
 int main(int argc, char* argv[])
 {
     vector<vector<int>> board;
@@ -141,6 +170,8 @@ int main(int argc, char* argv[])
         saveBoard(board, filename);
         simulateGeneration(board);
     }
+    //findStableBoard(board);
+    findStableBoard(board);
     return 0;
 }
 
