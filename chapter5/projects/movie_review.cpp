@@ -76,7 +76,7 @@ int movie_review_2D[3][5];
  * @return int 
  */
 
-int seed = time(NULL);
+int seed = time(0);
 mt19937 generator(seed);
 int main(int argc, char **argv); 
 /**
@@ -95,13 +95,45 @@ void display_movie_review_average(void);
 void display_movie_review_average_of_each_row(void);
 void display_movie_review_average_of_each_column(void);
 void display_movie_review_average_of_user_favorite_movie(void);
+void fill_movie_review_with_random_numbers(void);
+void display_user_outputs(void);
 
 /**
  * @brief use a 2D array to store movie review
  * 
  */
-void write_movie_review_to_file_2D();
-void read_movie_review_from_file_2D();
+void write_movie_review_to_file_2D(void);
+void read_movie_review_from_file_2D(void);
+
+void display_user_outputs(void)
+{
+    cout << "Movie Review" << endl;
+    display_movie_review();
+    cout << "Movie Review Average" << endl;
+    display_movie_review_average();
+    cout << "Movie Review Average of Each Row" << endl;
+    display_movie_review_average_of_each_row();
+    cout << "Movie Review Average of Each Column" << endl;
+    display_movie_review_average_of_each_column();
+    cout << "Movie Review Average of User Favorite Movie" << endl;
+    display_movie_review_average_of_user_favorite_movie();
+}
+
+void fill_movie_review_with_random_numbers(void)
+{
+    uniform_int_distribution<int> distribution(1, 10);
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            /**
+             * @brief fill the array with random numbers from 1 to 10
+             * 
+             */
+            movie_review[i][j] = distribution(generator);
+        }
+    }
+}
 
 void write_to_file(void)
 {
@@ -292,7 +324,11 @@ void write_movie_review_to_file_2D()
     {
         for (int j = 0; j < 5; j++)
         {
-            out_file << movie_review_2D[i][j] << " ";
+            /**
+             * @brief write random numbers from 1 to 10 to file 
+             * 
+             */
+            out_file << rand() % 10 + 1 << " ";
         }
         out_file << endl;
     }
@@ -388,24 +424,39 @@ int main(int argc, char **argv)
         {
         case 1:
             write_movie_review_to_file();
+            /**
+             * @brief display output of write_movie_review_to_file() function
+             * 
+             */
+            display_user_outputs();
             break;
         case 2:
             read_movie_review_from_file();
+            /**
+             * @brief display output of read_movie_review_from_file() function
+             * 
+             */
+            display_user_outputs();
             break;
         case 3:
             display_movie_review();
+            display_user_outputs();
             break;
         case 4:
             display_movie_review_average();
+            display_user_outputs();
             break;
         case 5:
             display_movie_review_average_of_each_row();
+            display_user_outputs();
             break;
         case 6:
             display_movie_review_average_of_each_column();
+            display_user_outputs();
             break;
         case 7:
             display_movie_review_average_of_user_favorite_movie();
+            display_user_outputs();
             break;
         case 8:
             cout << "Goodbye" << endl;
