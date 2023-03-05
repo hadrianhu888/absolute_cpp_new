@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "f:/GitHubRepos/absolute_cpp",
-      "program": "f:/GitHubRepos/absolute_cpp/build/Debug/outDebug",
+      "program": "f:/GitHubRepos/absolute_cpp/movie_review/movies.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
       "setupCommands": [

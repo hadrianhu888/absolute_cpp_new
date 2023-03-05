@@ -196,7 +196,7 @@ int main(int argc, char const **argv)
     float user_average = calculate_average(user_reviews);
     cout << "Your average review is: " << user_average << endl;
     float min_index = nearest_neighbor(movies, reviews, user_average);
-    cout << "The movie closest to your average is: " << endl; 
+    //cout << "The movie closest to your average is: " << endl; 
     locate_nearest_neighbour(movies, reviews, user_average);
     return 0;
 }
