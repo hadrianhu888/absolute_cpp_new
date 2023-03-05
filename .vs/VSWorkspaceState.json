@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\chapter3\\projects",
-    "\\chapter3\\projects\\prize_giveaway",
     "\\chapter5",
     "\\chapter5\\projects"
   ],
-  "SelectedNode": "\\chapter5\\projects\\life.txt",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
