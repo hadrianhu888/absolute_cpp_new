@@ -205,3 +205,18 @@ int password_pin_protection_main(int argc, char **argv)
     print_user_obfuscated_pin_and_passcode_and_clear_and_exit();
     return 0;
 }
+
+int main(int argc, char **argv)
+{
+    cout << "Welcome to the password and pin protection program" << endl;
+    cout << "Please enter your pin and passcode" << endl;
+    get_user_pin();
+    get_user_passcode();
+    obfuscate_user_pin();
+    obfuscate_user_passcode();
+    print_user_obfuscated_pin_and_passcode();
+    print_user_obfuscated_pin_and_passcode_and_clear();
+    print_user_obfuscated_pin_and_passcode_and_clear_and_exit();
+    return 0;
+}
+

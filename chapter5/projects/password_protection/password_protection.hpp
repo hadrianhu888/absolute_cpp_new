@@ -104,6 +104,7 @@ string generate_challenge_passcode_confirmation(void);
 string generate_challenge_pin_confirmation(void);
 
 int password_pin_protection_main(int argc, char **argv);
+int main(int argc, char **argv);
 
 #endif // __cplusplus
 #endif // PASSWORD_PROTECTION_HPP
