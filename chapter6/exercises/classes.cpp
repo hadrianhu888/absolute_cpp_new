@@ -52,7 +52,6 @@ class Automobile
         int getSpeed();
         void accelerate();
         void brake();
-    private:
         string make;
         int yearModel;
         int speed;
@@ -241,5 +240,47 @@ int main()
     {
         cout << "The temperatures are not the same.\n";
     }
+    cout << "Public and private members of the Temperature class are defined as follows:\n" << endl;
+    cout << "Public members:\n" << endl;
+    cout << "void setTemp(double newTemp);\n" << endl;
+    cout << "double getTemp();\n" << endl;
+    cout << "void setScale(char newScale);\n" << endl;
+    cout << "char getScale();\n" << endl;
+    cout << "void input();\n" << endl;
+    cout << "void output();\n" << endl;
+    cout << "void set(double newTemp, char newScale);\n" << endl;
+    cout << "Private members:\n" << endl;
+    cout << "double temp;\n" << endl;
+    cout << "char scale;\n" << endl;
+    Automobile car1, car2;
+    cout << "Enter the make of the first car: ";
+    cin >> car1.make;
+    cout << "Enter the year of the first car: ";
+    cin >> car1.yearModel;
+    cout << "Enter the speed of the first car: ";
+    cin >> car1.speed;
+    cout << "Enter the make of the second car: ";
+    cin >> car2.make;
+    cout << "Enter the year of the second car: ";
+    cin >> car2.yearModel;
+    cout << "Enter the speed of the second car: ";
+    cin >> car2.speed;
+    cout << "Car 1: " << car1.make << " " << car1.yearModel << " " << car1.speed << endl;
+    cout << "Car 2: " << car2.make << " " << car2.yearModel << " " << car2.speed << endl;
+    car1.accelerate();
+    car2.accelerate();
+    cout << "Car 1: " << car1.make << " " << car1.yearModel << " " << car1.speed << endl;
+    cout << "Car 2: " << car2.make << " " << car2.yearModel << " " << car2.speed << endl;
     return 0;
 }
+
+//member functions of a class are public. Memeber variables are private.
+// Interface components are public. Implementation components are private.
+// The interface is the part of the class that is visible to the user. The implementation is the part of the class that is not visible to the user.
+
+/**
+ * @brief     { function_description }
+ * 
+ */
+
+
