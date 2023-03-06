@@ -334,7 +334,7 @@ int main(int argc, char **argv)
     cout << "The term is: " << account1.term << endl;
     Fertilizer fertilizer1;
     getFertilizerData(fertilizer1);
-    // cout << "The fertilizer quantity is: " << fertilizer1.quantity << endl;
+    cout << "The fertilizer quantity is: " << fertilizer1.quantity << endl;
     cout << "The fertilizer nitrogen content is: " << fertilizer1.nitrogen_content << endl;
     Crop crop1;
     getCropData(crop1);
