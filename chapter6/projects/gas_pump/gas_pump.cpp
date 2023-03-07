@@ -25,6 +25,8 @@ class Gas_Pump
         int setGallonsPrice(int newGallons, int newPrice);
         int getGallonsPrice(int &gallons, int &price);
         int calculateTotal(int gallons, int price);
+        int resetGasPump();
+        int resetGasPump(int newGallons, int newPrice);
         void print();
     private:
         int gallons;
@@ -64,12 +66,32 @@ void Gas_Pump::print() {
     cout << "Price: " << price << endl;
     cout << "Total: " << total << endl;
 }
+int Gas_Pump::resetGasPump() {
+    gallons = 0;
+    price = 0;
+    total = 0;
+    return 0;
+}
+int Gas_Pump::resetGasPump(int newGallons, int newPrice) {
+    gallons = newGallons;
+    price = newPrice;
+    total = gallons * price;
+    return total;
+}
+
 
 int main(int argc,char **argv) {
     Gas_Pump pump1;
     pump1.setGallons(10);
     pump1.setPrice(2);
     pump1.calculateTotal(pump1.getGallons(), pump1.getPrice());
+    pump1.print();
+    /**
+     * @brief test reset functionality
+     * 
+     */
+    cout << "Resetting Gas Pump" << endl;
+    pump1.resetGasPump();
     pump1.print();
     return 0;
 }
