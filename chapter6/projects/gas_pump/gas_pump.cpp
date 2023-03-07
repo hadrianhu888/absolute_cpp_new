@@ -78,8 +78,6 @@ int Gas_Pump::resetGasPump(int newGallons, int newPrice) {
     total = gallons * price;
     return total;
 }
-
-
 int main(int argc,char **argv) {
     Gas_Pump pump1;
     pump1.setGallons(10);
