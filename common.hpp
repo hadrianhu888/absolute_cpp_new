@@ -62,6 +62,11 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <numeric>
+#include <ctime>
+#include <cwchar>
+#include <cwctype>
+#include <exception>
 
 using namespace std;
 using namespace std::chrono;
