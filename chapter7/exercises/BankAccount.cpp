@@ -164,7 +164,7 @@ int main(int argc, char **argv)
     account1.setBalance(500);
     account1.setRate(0.05);
     account1.setPeriod(1);
-    cout << "Amortization per period: " << account1.amortizationPerPeriod() << endl;
+    cout << "Amortization per period: " << (account1.amortizationPerPeriod()) << endl;
     account1.print();
     account2.print();
     return 0;

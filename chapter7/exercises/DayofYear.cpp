@@ -34,6 +34,25 @@ class DayofYear
         DayofYear destructor();
 };
 
+class Holiday: public DayofYear
+{
+    private:
+        string holidayName;
+        bool isHoliday;
+        int day;
+        int month;
+        int year;
+    public:
+        Holiday();
+        Holiday(int newDay, int newMonth, int newYear, string newHolidayName, bool isHoliday);
+        Holiday(string newHolidayName);
+        void setHolidayName(string newHolidayName);
+        string getHolidayName();
+        void print();
+        Holiday creator();
+        Holiday destructor();
+};
+
 int day;
 int month;
 int year;
@@ -108,12 +127,75 @@ DayofYear DayofYear::destructor()
     return temp;
 }
 
+Holiday::Holiday()
+{
+    holidayName = "";
+    isHoliday = false;
+}
+
+Holiday::Holiday(int newDay, int newMonth, int newYear, string newHolidayName, bool isHoliday)
+{
+    day = newDay;
+    month = newMonth;
+    year = newYear;
+    holidayName = newHolidayName;
+    isHoliday = isHoliday;
+}
+
+Holiday::Holiday(string newHolidayName)
+{
+    holidayName = newHolidayName;
+    isHoliday = false;
+}
+
+void Holiday::setHolidayName(string newHolidayName)
+{
+    holidayName = newHolidayName;
+}
+
+string Holiday::getHolidayName()
+{
+    return holidayName;
+}
+
+void Holiday::print()
+{
+    cout << "The date is " << month << "/" << day << "/" << year << endl;
+    cout << "The holiday is " << holidayName << endl;
+}
+
+Holiday Holiday::creator()
+{
+    Holiday temp;
+    return temp;
+}
+
+Holiday Holiday::destructor()
+{
+    Holiday temp;
+    return temp;
+}
+
 int main(int argc, char **argv)
 {
     DayofYear today;
     today.setDay(8);
     today.setMonth(3);
     today.setYear(2023);
+    /**
+     * @brief test holiday class
+     * 
+     */
+    Holiday todayHoliday;
+    todayHoliday.setDay(8);
+    todayHoliday.setMonth(3);
+    todayHoliday.setYear(2023);
+    todayHoliday.setHolidayName("My Birthday");
+    todayHoliday.print();
+    /**
+     * @brief test holiday class
+     * 
+     */
     today.print();
     return 0;
 }
