@@ -42,6 +42,8 @@ class BankAccount
         float amortizationPerPeriod();
         BankAccount creator();
         BankAccount destructor();
+        int convertToDollars();
+        double convertToCents();
 };
 
 int main(int argc, char **argv);
@@ -142,6 +144,17 @@ void BankAccount::print()
     cout << "Balance: " << balance << endl;
 }
 
+int BankAccount::convertToDollars()
+{
+    return balance / 100;
+}
+
+double BankAccount::convertToCents()
+{
+    balance = balance * 100;
+    return static_cast<int>(balance) - (static_cast<int>(balance) / 100) * 100;
+}
+
 BankAccount BankAccount::creator()
 {
     BankAccount newAccount;
@@ -164,6 +177,14 @@ int main(int argc, char **argv)
     account1.setBalance(500);
     account1.setRate(0.05);
     account1.setPeriod(1);
+    cout << "Name: " << account1.getName() << endl;
+    cout << "Address: " << account1.getAddress() << endl;
+    cout << "Account Number: " << account1.getAccountNumber() << endl;
+    cout << "Balance: " << account1.getBalance() << endl;
+    cout << "Rate: " << account1.getRate() << endl;
+    cout << "Period: " << account1.getPeriod() << endl;
+    cout << "Dollars: " << account1.convertToDollars() << endl;
+    cout << "Cents: " << account1.convertToCents() << endl;
     cout << "Amortization per period: " << (account1.amortizationPerPeriod()) << endl;
     account1.print();
     account2.print();
