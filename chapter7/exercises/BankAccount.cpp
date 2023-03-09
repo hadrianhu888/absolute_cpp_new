@@ -22,6 +22,8 @@ class BankAccount
         double balance;
         float rate; 
         int period; 
+        int dollars;
+        double cents;
     public:
         BankAccount();
         BankAccount(double newBalance, float newRate, int newPeriod);
@@ -32,12 +34,16 @@ class BankAccount
         void setBalance(double newBalance);
         void setRate(float newRate);
         void setPeriod(int newPeriod);
+        int setDollars(int newDollars);
+        double setCents(double newCents);
         string getName();
         string getAddress();
         string getAccountNumber();
         double getBalance();
         float getRate();
         int getPeriod();
+        int getDollars();
+        double getCents();
         void print();
         float amortizationPerPeriod();
         BankAccount creator();
@@ -101,6 +107,16 @@ void BankAccount::setPeriod(int newPeriod)
     period = newPeriod;
 }
 
+int BankAccount::setDollars(int newDollars)
+{
+    dollars = newDollars;
+}
+
+double BankAccount::setCents(double newCents)
+{
+    cents = newCents;
+}
+
 string BankAccount::getName()
 {
     return name;
@@ -124,6 +140,16 @@ double BankAccount::getBalance()
 float BankAccount::getRate()
 {
     return rate;
+}
+
+int BankAccount::getDollars()
+{
+    return dollars;
+}
+
+double BankAccount::getCents()
+{
+    return cents;
 }
 
 float BankAccount::amortizationPerPeriod()
