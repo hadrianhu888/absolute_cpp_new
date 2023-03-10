@@ -26,8 +26,8 @@ class DayofYear
         void setDay(int newDay);
         void setMonth(int newMonth);
         void setYear(int newYear);
-        int getDay();
-        int getMonth();
+        int getDay() {return day;}
+        int getMonth() {return month;}
         int getYear();
         void print();
         DayofYear creator();
@@ -93,16 +93,6 @@ void DayofYear::setMonth(int newMonth)
 void DayofYear::setYear(int newYear)
 {
     year = newYear;
-}
-
-int DayofYear::getDay()
-{
-    return day;
-}
-
-int DayofYear::getMonth()
-{
-    return month;
 }
 
 int DayofYear::getYear()

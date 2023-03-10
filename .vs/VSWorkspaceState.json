@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\chapter5",
-    "\\chapter5\\projects"
+    "\\chapter5\\projects",
+    "\\chapter6",
+    "\\chapter6\\exercises"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\chapter6\\exercises\\bank_account.cpp",
   "PreviewInSolutionExplorer": false
 }
