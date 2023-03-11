@@ -21,6 +21,8 @@ using namespace std;
 
 const int M = 3;
 
+int main(int argc, char **argv);
+
 class Suitors_Marriage
 {
     private:
@@ -204,7 +206,7 @@ void Suitors_Marriage::findWinner(int suitors, int eliminated)
     cout << "The winner is " << winner << endl;
 }
 
-int main()
+int main(int argc, char **argv)
 {
     int suitors;
     cout << "Enter the number of suitors: ";
