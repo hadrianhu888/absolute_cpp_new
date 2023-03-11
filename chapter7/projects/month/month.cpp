@@ -139,6 +139,6 @@ void Month::printMonth(char month_letter_1, char month_letter_2, char month_lett
     cout << "month = " << month_letter_1 << month_letter_2 << month_letter_3 << endl;
 }
 
-// Compare this snippet from chapter7\exercises\classA.cpp:
+// Path: chapter7\projects\month\month.cpp
 
 
