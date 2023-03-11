@@ -51,6 +51,7 @@ class ZipCode
         void set_bar_code(int bar_code);
         int get_bar_code_from_zip_code(int zip_code);
         int get_zip_code_from_bar_code(int bar_code);
+        int zipcode_from_PostNET_algorithm(string bar_code);
 }; 
 
 ZipCode::ZipCode()
@@ -171,11 +172,77 @@ int ZipCode::get_zip_code_from_bar_code(int bar_code)
     return zip_code;
 }
 
-int main(int argc, char **argv)
+int ZipCode::zipcode_from_PostNET_algorithm(string bar_code)
 {
-    ZipCode zip_code(12345);
-    cout << "The zip code is: " << zip_code.get_zip_code() << endl;
-    cout << "The bar code is: " << zip_code.get_bar_code() << endl;
-    return 0;
+    /**
+     * @split bar code into 5 groups of 5 digits each 
+     * Checkt that both length is 25 and the bar code is in binary format
+* Apply the POSTNET algorithm to the bar code to get the zip code 
+     * 
+     */
+    if(bar_code.length() != 25 || bar_code.find_first_not_of("01") != string::npos)
+    {
+        cout << "The bar code is not 25 digits long" << endl;
+        return -1;
+    }
+    else if (bar_code.length() == 25 && bar_code.find_first_not_of("01") == string::npos) 
+    {
+        /**
+         * @brief Apply the POSTNET algorithm to the bar code to get the zip code
+         * 
+         */
+        for(int i = 0; i < 5; i++)
+        {
+            int digit = 0; 
+            /**
+             * @brief convert barcode string to int
+             * 
+             */
+            for(int j = 0; j < 5; j++)
+            {
+                digit = digit * 10 + (bar_code[j] - '0');
+            }
+            digit = digit % 10;
+            bar_code = digit / 10;
+            /**
+             * @brief convert each group of 5 digits to a decimal number
+             * 
+             */
+            switch (digit)
+            {
+            case BAR_CODE_DECODER_7:
+                zip_code += 7;
+                break;
+            case BAR_CODE_DECODER_4:
+                zip_code += 4;
+                break;
+            case BAR_CODE_DECODER_2:
+                zip_code += 2;
+                break;
+            case BAR_CODE_DECODER_1:
+                zip_code += 1;
+                break;
+            case BAR_CODE_DECODER_0:
+                zip_code += 0;
+                break;
+            default:
+                break;
+            }
+        }
+    }
+    return zip_code;
 }
 
+int main(int argc, char **argv) 
+{
+    ZipCode zip_code;
+    zip_code.set_zip_code(12345);
+    cout << "The zip code is: " << zip_code.get_zip_code() << endl;
+    cout << "The bar code is: " << zip_code.get_bar_code() << endl;
+    zip_code.set_bar_code(12345);
+    cout << "The zip code is: " << zip_code.get_zip_code() << endl;
+    cout << "The bar code is: " << zip_code.get_bar_code() << endl;
+    string binary_bar_code = "1010101010101010101010101";
+    cout << "The zip code is: " << zip_code.zipcode_from_PostNET_algorithm(binary_bar_code) << endl;
+    return 0;
+}
