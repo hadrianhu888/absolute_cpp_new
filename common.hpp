@@ -67,7 +67,23 @@
 #include <cwchar>
 #include <cwctype>
 #include <exception>
-
+#include <algorithm>
+#include <deque>
+#include <list>
+#include <queue>
+#include <stack>
+#include <vector>
+#include <array>
+#include <forward_list>
+#include <map>
+#include <set>
+#include <unordered_map>
+#include <unordered_set>
+#include <iterator>
+#include <functional>
+#include <utility>
+#include <memory>
+#include <cassert> 
 using namespace std;
 using namespace std::chrono;
 
