@@ -94,6 +94,28 @@ int main(int argc, char **argv)
     cout << song << endl;
     strcat(song, franksSong);
     cout << song << endl;
+    char a[80];
+    char b[80];
+    cout << "Enter a string: ";
+    cin.getline(a, 80);
+    cout << "Enter another string: ";
+    cin.getline(b, 80);
+    cout << "The first string is: " << a << endl;
+    cout << "The second string is: " << b << endl;
+    cout << "The length of the first string is: " << strlen(a) << endl;
+    char myTestString[80];
+    cout << "Enter a string: ";
+    cin.getline(myTestString, 80);
+    cout << "The string you entered is: " << myTestString << endl;
+    cout << "The length of the string is: " << strlen(myTestString) << endl;
+    cout << "End of Input" << endl;
+    char symbol; 
+    do {
+        cout << "Enter a character: ";
+        cin >> symbol;
+        cout << "The character you entered is: " << symbol << endl;
+    } while (symbol != 'q');
+    
     return 0;
 }
 
@@ -101,5 +123,9 @@ int main(int argc, char **argv)
  * @brief 
  * \n has 2 characters. n has one character. "Mary" has 4 characters. "M" has 1 character. "Mary\n" has 5 characters.
  * Declaration is the statement that defines the type of a variable. Definition is the statement that defines the value of a variable.
+ * 
+ * 
+ * 
+ * 
  * 
  */
