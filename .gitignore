@@ -81,3 +81,7 @@ dkms.conf
 
 *.dat
 *.txt
+
+.dist/
+.vs/
+.vscode/
