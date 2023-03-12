@@ -14,43 +14,23 @@
 
 #ifdef __cplusplus
 
-#include <iostream>
-#include <string>
-#include <vector>
+/**
+ * Also use this file in C code with preprocessor directive for C code usage 
+ * 
+ */
+
+#endif /*__cplusplus */
+
 #include <algorithm>
-#include <numeric>
-#include <iomanip>
-#include <fstream> 
-#include <sstream>
-#include <map>
-#include <set>
-#include <iterator>
-#include <functional>
-#include <cctype>
-#include <cmath>
-#include <ctime>
-#include <cstdlib>
-#include <cassert>
-#include <memory>
-#include <utility>
-#include <limits>
-#include <typeinfo>
-#include <stdexcept>
-#include <exception>
-#include <new>
-#include <initializer_list>
-#include <tuple>
 #include <array>
-#include <regex>
-#include <chrono>
-#include <random>
-#include <thread>
-#include <future>
-#include <atomic> 
-#include <bitset> 
+#include <atomic>
+#include <bitset>
+#include <cassert>
+#include <cassert>
 #include <cctype>
 #include <cerrno>
 #include <cfloat>
+#include <chrono>
 #include <ciso646>
 #include <climits>
 #include <clocale>
@@ -62,36 +42,48 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
-#include <numeric>
 #include <ctime>
 #include <cwchar>
 #include <cwctype>
-#include <exception>
-#include <algorithm>
 #include <deque>
-#include <list>
-#include <queue>
-#include <stack>
-#include <vector>
-#include <array>
+#include <exception>
 #include <forward_list>
+#include <fstream>
+#include <functional>
+#include <future>
+#include <initializer_list>
+#include <iomanip>
+#include <iostream>
+#include <iterator>
+#include <limits>
+#include <list>
 #include <map>
+#include <memory>
+#include <new>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <regex>
 #include <set>
+#include <sstream>
+#include <stack>
+#include <stdexcept>
+#include <string>
+#include <thread>
+#include <tuple>
+#include <typeinfo>
 #include <unordered_map>
 #include <unordered_set>
-#include <iterator>
-#include <functional>
 #include <utility>
-#include <memory>
-#include <cassert> 
+#include <vector>
+
 using namespace std;
 using namespace std::chrono;
 
 unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-std::default_random_engine generator (seed);
-std::uniform_int_distribution<int> distribution(1,100);
+std::default_random_engine generator(seed);
+std::uniform_int_distribution<int> distribution(1, 100);
 
 #endif /*__cplusplus */
 #endif /* COMMON_HPP */
-
-
+ 
