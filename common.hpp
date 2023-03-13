@@ -19,8 +19,6 @@
  * 
  */
 
-#endif /*__cplusplus */
-
 #include <algorithm>
 #include <array>
 #include <atomic>
@@ -86,4 +84,3 @@ std::uniform_int_distribution<int> distribution(1, 100);
 
 #endif /*__cplusplus */
 #endif /* COMMON_HPP */
- 
