@@ -35,5 +35,27 @@
   "C_Cpp_Runner.useMsvc": false,
   "C_Cpp_Runner.useAddressSanitizer": false,
   "chatgpt.apiKey": "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",
-  "chatgpt.timeoutLength": 30
+  "chatgpt.timeoutLength": 30,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "googletest.failed",
+        "settings": {
+          "foreground": "#f00"
+        }
+      },
+      {
+        "scope": "googletest.passed",
+        "settings": {
+          "foreground": "#0f0"
+        }
+      },
+      {
+        "scope": "googletest.run",
+        "settings": {
+          "foreground": "#0f0"
+        }
+      }
+    ]
+  }
 }
